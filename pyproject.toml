@@ -19,6 +19,7 @@ dependencies = [
 [dependency-groups]
 dev = [
     "datasets>=3.6.0",
+    "einops>=0.8.1",
     "scikit-learn>=1.7.0",
 ]
 
