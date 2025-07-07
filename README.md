@@ -1,3 +1,3 @@
-Representation Learning algorithms in Jax (Equinox).
+Collection of representation learning algorithms in Torch.
 
-Why **umbral**? A kind of wordplay combining equinox (which is related to night --- meaning literally *Equal night*) and representation learning, related to latents, so 'hidden', in-shadow etc.
+Why **umbral**? Latents are 'hidden', so, in-shadow etc.
