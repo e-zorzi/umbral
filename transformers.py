@@ -27,7 +27,7 @@ class MultiHeadAttention(torch.nn.Module):
 
 
 class TransformerBlock(torch.nn.Module):
-    def __init__(self, key, n_heads=3, kq_embedding_size=4):
+    def __init__(self, n_heads=3, kq_embedding_size=4):
         super().__init__()
         self.multiheadattention = MultiHeadAttention(
             n_heads=n_heads, kq_embedding_size=kq_embedding_size
@@ -36,9 +36,9 @@ class TransformerBlock(torch.nn.Module):
         self.norm2 = torch.nn.RMSNorm(_N_FEATURES)
         self.mlp = [
             torch.nn.Linear(_N_FEATURES, 128),
-            torch.nn.SiLU,
+            torch.nn.SiLU(),
             torch.nn.Linear(128, _N_FEATURES),
-            torch.nn.SiLU,
+            torch.nn.SiLU(),
         ]
 
     def __call__(self, x: torch.tensor):
